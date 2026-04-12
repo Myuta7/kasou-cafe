@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="仮想カフェ — こだわりのコーヒーと手作りケーキをお楽しみください。">
+  <title>仮想カフェ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#top" class="header__logo">仮想カフェ</a>
+      <button class="header__menu-btn" id="menuBtn" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="header__nav" id="nav">
+        <ul class="header__nav-list">
+          <li><a href="#news">What's New</a></li>
+          <li><a href="#interior">店内</a></li>
+          <li><a href="#menu">メニュー</a></li>
+          <li><a href="#gallery">ギャラリー</a></li>
+          <li><a href="#access">アクセス</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ヒーロー -->
+  <section class="hero" id="top">
+    <div class="hero__bg">
+      <img src="images/hero.png" alt="仮想カフェ" class="hero__img">
+    </div>
+    <div class="hero__content">
+      <p class="hero__sub fade-in">Welcome to</p>
+      <h1 class="hero__title fade-in">仮想カフェ</h1>
+      <p class="hero__desc fade-in">こだわりのコーヒーと、手作りのケーキ。<br>特別な時間をあなたに。</p>
+      <a href="#menu" class="btn fade-in">メニューを見る</a>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- What's New -->
+  <section class="section news" id="news">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">What's New</p>
+        <h2 class="section__title">新着情報</h2>
+      </div>
+      <ul class="news__list">
+        <li class="news__item fade-in">
+          <time class="news__date" datetime="2026-04-01">2026.04.01</time>
+          <span class="news__tag">お知らせ</span>
+          <p class="news__text">春の新メニューが登場しました。桜のシフォンケーキをぜひお試しください。</p>
+        </li>
+        <li class="news__item fade-in">
+          <time class="news__date" datetime="2026-03-15">2026.03.15</time>
+          <span class="news__tag">イベント</span>
+          <p class="news__text">ラテアートワークショップを開催します。初心者の方も大歓迎です。</p>
+        </li>
+        <li class="news__item fade-in">
+          <time class="news__date" datetime="2026-03-01">2026.03.01</time>
+          <span class="news__tag">お知らせ</span>
+          <p class="news__text">Webサイトをリニューアルしました。今後ともよろしくお願いいたします。</p>
+        </li>
+        <li class="news__item fade-in">
+          <time class="news__date" datetime="2026-02-14">2026.02.14</time>
+          <span class="news__tag">季節限定</span>
+          <p class="news__text">バレンタイン限定のチョコレートケーキセットは大変ご好評いただきました。</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 店内画像 -->
+  <section class="section interior" id="interior">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">Interior</p>
+        <h2 class="section__title">店内のご紹介</h2>
+        <p class="section__desc">落ち着いた雰囲気の中で、ゆったりとした時間をお過ごしいただけます。</p>
+      </div>
+    </div>
+    <div class="interior__grid">
+      <div class="interior__item interior__item--large fade-in">
+        <img src="images/interior-1.png" alt="店内メインスペース" class="interior__img">
+        <div class="interior__placeholder">店内メインスペース</div>
+      </div>
+      <div class="interior__item fade-in">
+        <img src="images/interior-2.png" alt="カウンター席" class="interior__img">
+        <div class="interior__placeholder">カウンター席</div>
+      </div>
+      <div class="interior__item fade-in">
+        <img src="images/interior-3.png" alt="窓際テーブル" class="interior__img">
+        <div class="interior__placeholder">窓際テーブル</div>
+      </div>
+      <div class="interior__item fade-in">
+        <img src="images/interior-4.png" alt="ソファスペース" class="interior__img">
+        <div class="interior__placeholder">ソファスペース</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- メニュー -->
+  <section class="section menu" id="menu">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">Menu</p>
+        <h2 class="section__title">メニュー</h2>
+      </div>
+      <div class="menu__tabs">
+        <button class="menu__tab menu__tab--active" data-target="drinks">ドリンク</button>
+        <button class="menu__tab" data-target="food">フード</button>
+        <button class="menu__tab" data-target="cakes">ケーキ</button>
+      </div>
+
+      <!-- ドリンク -->
+      <div class="menu__panel menu__panel--active" id="drinks">
+        <div class="menu__grid">
+          <div class="menu__item fade-in">
+            <div class="menu__item-info">
+              <h3 class="menu__item-name">ブレンドコーヒー</h3>
+              <p class="menu__item-desc">自家焙煎のこだわりブレンド</p>
+            </div>
+            <span class="menu__item-price">¥550</span>
+          </div>
+          <div class="menu__item fade-in">
+            <div class="menu__item-info">
+              <h3 class="menu__item-name">カフェラテ</h3>
+              <p class="menu__item-desc">なめらかなミルクフォームと深いエスプレッソ</p>
+            </div>
+            <span class="menu__item-price">¥650</span>
+          </div>
+          <div class="menu__item fade-in">
+            <div class="menu__item-info">
+              <h3 class="menu__item-name">カプチーノ</h3>
+              <p class="menu__item-desc">ふわふわのフォームミルク</p>
+            </div>
+            <span class="menu__item-price">¥650</span>
+          </div>
+          <div class="menu__item fade-in">
+            <div class="menu__item-info">
+              <h3 class="menu__item-name">アイスコーヒー</h3>
+              <p class="menu__item-desc">水出しコールドブリュー</p>
+            </div>
+            <span class="menu__item-price">¥600</span>
+          </div>
+          <div class="menu__item fade-in">
+            <div class="menu__item-info">
+              <h3 class="menu__item-name">ほうじ茶ラテ</h3>
+              <p class="menu__item-desc">香ばしいほうじ茶とミルクの調和</p>
+            </div>
+            <span class="menu__item-price">¥680</span>
+          </div>
+          <div class="menu__item fade-in">
+            <div class="menu__item-info">
+              <h3 class="menu__item-name">チャイ</h3>
+              <p class="menu__item-desc">スパイスの効いた温かいチャイ</p>
+            </div>
+            <span class="menu__item-price">¥680</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- フード -->
+      <div class="menu__panel" id="food">
+        <div class="menu__grid">
+          <div class="menu__item fade-in">
+            <div class="menu__item-info">
+              <h3 class="menu__item-name">クロックムッシュ</h3>
+              <p class="menu__item-desc">とろけるチーズのホットサンド</p>
+            </div>
+            <span class="menu__item-price">¥980</span>
+          </div>
+          <div class="menu__item fade-in">
+            <div class="menu__item-info">
+              <h3 class="menu__item-name">アボカドトースト</h3>
+              <p class="menu__item-desc">厚切りパンとクリーミーアボカド</p>
+            </div>
+            <span class="menu__item-price">¥950</span>
+          </div>
+          <div class="menu__item fade-in">
+            <div class="menu__item-info">
+              <h3 class="menu__item-name">キッシュ</h3>
+              <p class="menu__item-desc">野菜とチーズの本格キッシュ</p>
+            </div>
+            <span class="menu__item-price">¥880</span>
+          </div>
+          <div class="menu__item fade-in">
+            <div class="menu__item-info">
+              <h3 class="menu__item-name">スコーン</h3>
+              <p class="menu__item-desc">クロテッドクリーム添え</p>
+            </div>
+            <span class="menu__item-price">¥480</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ケーキ -->
+      <div class="menu__panel" id="cakes">
+        <div class="menu__grid">
+          <div class="menu__item fade-in">
+            <div class="menu__item-info">
+              <h3 class="menu__item-name">ニューヨークチーズケーキ</h3>
+              <p class="menu__item-desc">濃厚でなめらかな口溶け</p>
+            </div>
+            <span class="menu__item-price">¥680</span>
+          </div>
+          <div class="menu__item fade-in">
+            <div class="menu__item-info">
+              <h3 class="menu__item-name">ガトーショコラ</h3>
+              <p class="menu__item-desc">ベルギーチョコレート使用</p>
+            </div>
+            <span class="menu__item-price">¥680</span>
+          </div>
+          <div class="menu__item fade-in">
+            <div class="menu__item-info">
+              <h3 class="menu__item-name">モンブラン</h3>
+              <p class="menu__item-desc">国産栗を使った季節のケーキ</p>
+            </div>
+            <span class="menu__item-price">¥720</span>
+          </div>
+          <div class="menu__item fade-in">
+            <div class="menu__item-info">
+              <h3 class="menu__item-name">フルーツタルト</h3>
+              <p class="menu__item-desc">旬のフルーツをふんだんに</p>
+            </div>
+            <span class="menu__item-price">¥750</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="menu__note">※ 価格はすべて税込です。メニューは仕入れ状況により変更する場合がございます。</p>
+    </div>
+  </section>
+
+  <!-- ギャラリー -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">Gallery</p>
+        <h2 class="section__title">フォトギャラリー</h2>
+      </div>
+    </div>
+    <div class="gallery__grid">
+      <div class="gallery__item fade-in">
+        <img src="images/gallery-1.png" alt="ラテアート" class="gallery__img">
+        <div class="gallery__placeholder">ラテアート</div>
+      </div>
+      <div class="gallery__item fade-in">
+        <img src="images/gallery-2.png" alt="チーズケーキ" class="gallery__img">
+        <div class="gallery__placeholder">チーズケーキ</div>
+      </div>
+      <div class="gallery__item fade-in">
+        <img src="images/gallery-3.png" alt="季節のタルト" class="gallery__img">
+        <div class="gallery__placeholder">季節のタルト</div>
+      </div>
+      <div class="gallery__item fade-in">
+        <img src="images/gallery-4.png" alt="ほうじ茶ラテ" class="gallery__img">
+        <div class="gallery__placeholder">ほうじ茶ラテ</div>
+      </div>
+      <div class="gallery__item fade-in">
+        <img src="images/gallery-5.png" alt="スコーンセット" class="gallery__img">
+        <div class="gallery__placeholder">スコーンセット</div>
+      </div>
+      <div class="gallery__item fade-in">
+        <img src="images/gallery-6.png" alt="ガトーショコラ" class="gallery__img">
+        <div class="gallery__placeholder">ガトーショコラ</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- アクセス -->
+  <section class="section access" id="access">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">Access</p>
+        <h2 class="section__title">アクセス</h2>
+      </div>
+      <div class="access__inner">
+        <div class="access__map fade-in">
+          <!-- Google マップの埋め込みコードをここに入れてください -->
+          <div class="access__map-placeholder">
+            <p>地図をここに挿入</p>
+            <p class="access__map-note">Google マップの埋め込みコードを追加してください</p>
+          </div>
+        </div>
+        <div class="access__info fade-in">
+          <dl class="access__detail">
+            <dt>住所</dt>
+            <dd>〒000-0000<br>東京都〇〇区〇〇町0-0-0</dd>
+
+            <dt>最寄り駅</dt>
+            <dd>〇〇線「〇〇駅」徒歩5分</dd>
+
+            <dt>営業時間</dt>
+            <dd>月〜金　10:00 – 20:00<br>土・日・祝　10:00 – 21:00</dd>
+
+            <dt>定休日</dt>
+            <dd>毎週水曜日</dd>
+
+            <dt>電話</dt>
+            <dd><a href="tel:00-0000-0000">00-0000-0000</a></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">Contact</p>
+        <h2 class="section__title">お問い合わせ</h2>
+        <p class="section__desc">ご予約・ご質問はこちらのフォームよりお気軽にどうぞ。</p>
+      </div>
+      <form class="contact__form fade-in" id="contactForm">
+        <div class="form__group">
+          <label class="form__label" for="name">お名前 <span class="form__required">必須</span></label>
+          <input class="form__input" type="text" id="name" name="name" placeholder="山田 太郎" required>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="email">メールアドレス <span class="form__required">必須</span></label>
+          <input class="form__input" type="email" id="email" name="email" placeholder="example@email.com" required>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="subject">件名</label>
+          <input class="form__input" type="text" id="subject" name="subject" placeholder="ご予約について">
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="message">メッセージ <span class="form__required">必須</span></label>
+          <textarea class="form__textarea" id="message" name="message" rows="6" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+        </div>
+        <div class="form__submit">
+          <button type="submit" class="btn btn--dark">送信する</button>
+        </div>
+        <div class="form__message" id="formMessage"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="#top" class="footer__logo">仮想カフェ</a>
+        <nav class="footer__nav">
+          <a href="#news">What's New</a>
+          <a href="#interior">店内</a>
+          <a href="#menu">メニュー</a>
+          <a href="#gallery">ギャラリー</a>
+          <a href="#access">アクセス</a>
+          <a href="#contact">お問い合わせ</a>
+        </nav>
+      </div>
+      <p class="footer__copy">&copy; 2026 仮想カフェ. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
