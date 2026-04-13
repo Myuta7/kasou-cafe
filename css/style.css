@@ -273,14 +273,15 @@ ul {
   width: 1px;
   height: 50px;
   background: rgba(255, 255, 255, 0.4);
+  will-change: transform;
+  transform-origin: top;
   animation: scrollLine 2s ease infinite;
 }
 
 @keyframes scrollLine {
-  0% { transform: scaleY(0); transform-origin: top; }
-  50% { transform: scaleY(1); transform-origin: top; }
-  51% { transform: scaleY(1); transform-origin: bottom; }
-  100% { transform: scaleY(0); transform-origin: bottom; }
+  0% { transform: scaleY(0); }
+  50% { transform: scaleY(1); }
+  100% { transform: scaleY(0); }
 }
 
 /* ===========================
@@ -314,7 +315,7 @@ ul {
 
 .section__desc {
   font-size: 0.9rem;
-  color: var(--color-text-light);
+  color: #595959;
   font-weight: 300;
   line-height: 2;
 }
@@ -518,7 +519,7 @@ ul {
 
 .menu__item-desc {
   font-size: 0.75rem;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.65);
   font-weight: 300;
 }
 
@@ -532,7 +533,7 @@ ul {
 .menu__note {
   text-align: center;
   font-size: 0.75rem;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.6);
   margin-top: 48px;
   font-weight: 300;
 }
@@ -783,7 +784,7 @@ ul {
   font-size: 0.7rem;
   font-weight: 300;
   letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.6);
 }
 
 /* ===========================
